@@ -45,12 +45,11 @@ Estructura de los datos:
 | CAMPO | DESCRIPCIÓN | REQUERIDO |
 | ----- | ---- | --- |
 | nit | Número de identificación del paciente | SI |
+| entidad | Entidad del paciente | SI |
 | fecha | Fecha de registro | SI |
 | valorTotal	| Valor total del documento | SI |
 | valorCopago	| Valor del copago | SI |
 | tipoPago	| Tipo de pago del documento | SI |
-| usuario	| Usuario quien elaboró el documento | SI |
-| cedulaUsuario	| Cédula del usuario quien elaboró el documento | SI |
 | cedulaVendedor	| Cédula del vendedor del documento | NO |
 | sede	| Sede donde se registró el doc | SI |
 | contrato	| Número de contrato | NO |
@@ -83,7 +82,6 @@ Estructura de los datos:
 | direccion | Dirección del paciente | NO |
 | email | 	Email del paciente	 | NO |
 | celular | Celular del paciente | NO |
-| entidad | Entidad del paciente | SI |
 | convenio | Convenio del paciente | NO |
 | regimen | Regimen del paciente | SI |
 | codigoCiudad | Código de la ciudad | SI |
@@ -105,12 +103,11 @@ Siendo: \*\*\*\*\*\*\*\*.\*\*\*\*\*\*\*\*.\*\*\*\*\*\*\*\* el token que obtuvo e
 ```json
 {
   "nit": "1111111111",
+  "entidad": "900372288",
   "fecha": "2022-04-07 10:00:00",
   "valorTotal": 10460,
   "valorCopago": 500,
   "tipoPago": "001",
-  "usuario": "ADMINISTRADOR",
-  "cedulaUsuario": "999999",
   "cedulaVendedor": "2222222222",
   "sede": "001",
   "contrato": "",
@@ -137,7 +134,6 @@ Siendo: \*\*\*\*\*\*\*\*.\*\*\*\*\*\*\*\*.\*\*\*\*\*\*\*\* el token que obtuvo e
   "direccion": "",
   "email": "",
   "celular": "1234567890",
-  "entidad": "900372288",
   "convenio": "",
   "regimen": "1",
   "codigoCiudad": "068001"
