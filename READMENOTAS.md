@@ -45,7 +45,7 @@ Estructura de los datos:
 | CAMPO | DESCRIPCIÓN | REQUERIDO |
 | ----- | ---- | --- |
 | fechaCreacion | Fecha de creación | SI |
-| nitCliente | Nit del cliente | SI |
+| nit | Nit del cliente | SI |
 | concepto	| Concepto o descripción de la nota | NO |
 | tipoNota	| Tipo de nota (1, 2, 3) | SI |
 | valorIva	| Valor devuelto del IVA | SI |
@@ -82,7 +82,7 @@ Siendo: \*\*\*\*\*\*\*\*.\*\*\*\*\*\*\*\*.\*\*\*\*\*\*\*\* el token que obtuvo.
 ```json
 {
   "fechaCreacion": "2022-04-07 12:00:00",
-  "nitCliente": "1111111111",	
+  "nit": "1111111111",	
   "concepto": "",
   "tipoNota": "1",
   "valorIva": 0,
