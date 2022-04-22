@@ -121,6 +121,7 @@ Estructura de los datos:
 | barrio                | Barrio del cliente                       | NO        |
 | telefono              | Teléfono                                 | SI        |
 | email                 | Celular de la entidad                    | NO        |
+| emailFacturacion      | correo de facturacion electrónica        | NO        |
 | celular               | Email cliente                            | SI        |
 | regimen               | Régimen de salud                         | NO        |
 | digitoVerificacion    | Dígito de verificación                   | SI        |
@@ -263,6 +264,7 @@ Factura para una entidad
     "barrio": "",
     "telefono": "60070085",
     "email": "",
+    "emailFacturacion": "",
     "celular": "3200000000",
     "regimen": "",
     "digitoVerificacion": "1",
