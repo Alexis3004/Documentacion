@@ -45,7 +45,6 @@ Estructura de los datos:
 | CAMPO | DESCRIPCIÓN | REQUERIDO |
 | ----- | ---- | --- |
 | nit | Número de identificación del paciente | SI |
-| entidad | Entidad del paciente | SI |
 | fecha | Fecha de registro | SI |
 | valorTotal	| Valor total del documento | SI |
 | valorCopago	| Valor del copago | SI |
@@ -77,6 +76,7 @@ Estructura de los datos:
 | primerApellido	| Primer apellido paciente | SI |
 | segundoApellido	| Segundo apellido paciente | NO |
 | fechaNacimiento	| Fecha de nacimiento del paciente | SI |
+| entidad | Entidad del paciente | SI |
 | sexo	| 	Sexo del paciente, valores: M, F, Vacio | NO |
 | tipoIdentificacion	| Tipo de identificación (CC, TI, etc) | SI |
 | direccion | Dirección del paciente | NO |
@@ -103,7 +103,6 @@ Siendo: \*\*\*\*\*\*\*\*.\*\*\*\*\*\*\*\*.\*\*\*\*\*\*\*\* el token que obtuvo e
 ```json
 {
   "nit": "1111111111",
-  "entidad": "900372288",
   "fecha": "2022-04-07 10:00:00",
   "valorTotal": 10460,
   "valorCopago": 500,
@@ -129,6 +128,7 @@ Siendo: \*\*\*\*\*\*\*\*.\*\*\*\*\*\*\*\*.\*\*\*\*\*\*\*\* el token que obtuvo e
   "primerApellido": "Pérez",
   "segundoApellido": "",
   "fechaNacimiento": "1998-04-30",
+  "entidad": "900372288",
   "sexo": "M",
   "tipoIdentificacion": "CC",
   "direccion": "",
