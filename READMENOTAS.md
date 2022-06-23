@@ -45,25 +45,24 @@ Estructura de los datos:
 | CAMPO | DESCRIPCIÓN | REQUERIDO |
 | ----- | ---- | --- |
 | fechaCreacion | Fecha de creación | SI |
-| nit | Nit del cliente | SI |
 | concepto	| Concepto o descripción de la nota | NO |
 | tipoNota	| Tipo de nota (1, 2, 3) | SI |
 | valorIva	| Valor devuelto del IVA | SI |
 | valorTotal	| Valor total de la nota después de impuestos | SI |
 | retencion	| Valor en porcentaje devuelto de la retención | SI |
-| cedulaUsuario	| Cédula del usuario que lo creo | SI |
+| cedulaUsuario	| Cédula del usuario que crea la nota | SI |
 | sede	| Sede donde se registró la nota | SI |
+| numeroFactura | Número de factura a la que se le aplicó la nota | SI |
 
 
 ### **DETALLE**
 | CAMPO | DESCRIPCIÓN | REQUERIDO |
 | ----- | ---- | --- |
-| numeroFactura | Número de factura a la que se le aplicó la nota | SI |
-| codigoProcedimiento | Código del procedimiento o producto de la nota | SI |
+| articulo | Código del procedimiento o producto de la nota | SI |
 | cantidad | 	Cantidad del procedimiento o producto aplicada en la nota | SI |
-| valorProcedimiento	| Valor total devuelto del procedimiento o producto antes de impuestos | SI |
+| valorArticulo	| valor unitario devuelto del procedimiento o producto antes de impuestos | SI |
 | valorIva	| Valor devuelto del IVA del procedimiento o producto | SI |
-| valorTotal	| Valor total devuelto del procedimiento o producto | SI |
+| valorTotal	| Valor total devuelto del procedimiento o producto antes de impuestos | SI |
 
 ### Ejemplo de petición para la inserción de notas crédito
 
@@ -81,23 +80,31 @@ Siendo: \*\*\*\*\*\*\*\*.\*\*\*\*\*\*\*\*.\*\*\*\*\*\*\*\* el token que obtuvo.
 | Cuerpo: |  |
 ```json
 {
-  "fechaCreacion": "2022-04-07 12:00:00",
-  "nit": "1111111111",	
-  "concepto": "",
+  "fechaCreacion": "2022-06-23 08:25:00",
+  "concepto": "Dev. Total Factura",
   "tipoNota": "1",
-  "valorIva": 0,
-  "valorTotal": 10460.10,
-  "retencion": "0.16",
+  "valorIva": 275.50,
+  "valorTotal": 5583.5,
+  "retencion": 142,
   "cedulaUsuario": "999999",
   "sede": "01",
+  "numeroFactura": "SETP000000000",
   "detalle": [
+      {
+        "articulo": "00100001",
+        "cantidad": 1,
+        "valorArticulo": 1450,
+        "valorIva": 275.50,
+        "porcentajeIva": 19,
+        "valorTotal": 1450
+    },
     {
-      "numeroFactura": "SETP000000000",
-      "codigoProcedimiento": "901101",
-      "cantidad": 1,
-      "valorProcedimiento": 10460.10, 
-      "valorIva": 0,
-      "valorTotal": 10460.10
+        "articulo": "00100005",
+        "cantidad": 1,
+        "valorArticulo": 4000,
+        "valorIva": 0,
+        "porcentajeIva": 0,
+        "valorTotal": 4000
     }
   ]
 }
